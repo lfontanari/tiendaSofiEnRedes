@@ -1,0 +1,8 @@
+/* NavBar.css */
+
+.navbar-logo {
+    width: 80px; /* Ajusta el tamaño de acuerdo a tus necesidades */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-right: 10px; /* Opcional: Añade un margen derecho para separar el texto del logo */
+  }
+  
