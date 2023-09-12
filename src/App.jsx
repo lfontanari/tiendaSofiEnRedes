@@ -1,23 +1,47 @@
 import { useState } from 'react'
-import './App.css'
+//import './App.css'
+import './CSS/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
 
-function App() {
-
+export default function App() {
   return (
-    <>
-      <div>
-        <NavBar />
-      </div>
-      <div>
-        <ItemListContainer greeting="¡Bienvenidos a nuestro universo marketinero!" />
-      </div>
+    <BrowserRouter>
       
-    </>
+      <NavBar />
+      
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer />}  />
+        <Route exact path="/categoria/:categoriaNombre" element={<ItemListContainer />} />
+      </Routes> 
+    </BrowserRouter>
   )
 }
+//function App() {
+//  return (
+//    <>
+//    <BrowserRouter>
+//      <div>
+//        <NavBar />
+//      </div>
+//      
+//      <Routes>
+//        <Route exact path="/" element={<ItemListContainer greeting="¡Bienvenidos a nuestro universo marketinero!" />}  />
+//      
+//      </Routes> 
+//      <div>
+//               <ItemCount/>
+//      </div>
+      
+      /* aca va el footer */
+//    </BrowserRouter>
+//    </>
+//  )
+//}
 
-export default App;
+//export default App;

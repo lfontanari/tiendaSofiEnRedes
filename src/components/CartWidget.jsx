@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CartWidget = () => {
   return (
     <div>
@@ -8,5 +7,4 @@ const CartWidget = () => {
     </div>
   );
 };
-
 export default CartWidget;

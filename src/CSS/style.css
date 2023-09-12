@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Open Sans', cursive;
+  }
+
+   /* rosa: #f48aba
+   // verde: #2cb46c
+   // naranja #ff6d27
+   // clarito: #f6ebe7
+   */
+
+.header-nav {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 50px;
+      background-color: #f48aba;
+      box-shadow: 0 1px 2px;
+}
+
+.header-ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+}
+
+.header-li {
+      margin: 0 .5em;
+}
+
+.footer {
+      display: flex;
+      padding: 5px 80px;
+      background-color: #f48aba;
+      box-shadow: 0 1px 2px;
+}
+
+
+
+main {
+      background-color: #f6ebe7;
+}
+  
+.logo {
+      width: 100px;
+}
+  
+
+.modal-oculto {
+      display: none;
+}
+  
+
+  
+.item-texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+}
+  
+.item-texto p {
+      color: #2cb46c;
+      font-weight: bold;
+      font-size: 1.5rem;
+}
+  
+.img {
+      width: 100px;
+}
+  
+.item-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 3em;
+      padding: 0 5em;
+      padding-bottom: 5em;
+}
+
+.navbar-logo {
+      width: 80px; /* Ajusta el tamaño de acuerdo a tus necesidades */
+      height: auto; /* Mantén la proporción de la imagen */
+      margin-right: 10px; /* Opcional: Añade un margen derecho para separar el texto del logo */
+}
+
+.item-list-container {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+}
+
+.tarjeta {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px black solid;
+      gap: 1em;
+      box-shadow: 0 2px 2px;
+      background-color: white;
+}
+  
+.tarjeta img {
+      width: 200px;
+      object-fit: cover;
+}
+  
+.tarjeta h6 {
+      font-size: 1rem;
+      border: 1px solid black;
+      width: 100%;
+      text-align: center;
+      background-color: black;
+      color: #f48aba;
+}
+  
+.tarjeta p {
+      font-weight: 100;
+      color:#f48aba;
+      font-size: 2rem;
+ }
+  
+  
+  
+.info {
+      background:#f48aba;
+      font-weight: bold;
+}
+
+h1 {
+    color: #333;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    color: #f48aba;
+}
