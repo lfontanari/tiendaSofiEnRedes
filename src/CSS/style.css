@@ -82,6 +82,7 @@ main {
       gap: 3em;
       padding: 0 5em;
       padding-bottom: 5em;
+     
 }
 
 .navbar-logo {
@@ -95,8 +96,25 @@ main {
       padding: 20px;
       border: 1px solid #ccc;
       text-align: center;
+}
      
+.item-detail-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+ }
 
+ .item-detail {
+      display:flexbox;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+ }
 .tarjeta {
       width: 100%;
       display: flex;

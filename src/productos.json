@@ -47,5 +47,40 @@
     "nombre" : "Asesorias 1:1",
     "precio": 5500,
     "imagen": "./src/assets/img/SR_VERDE.png"
+},
+{   
+    "id" :8,
+    "categoria" : "E-BOOKS",
+    "nombre" : "Master en E-Commerce",
+    "precio": 25000,
+    "imagen": "./src/assets/img/SR_MasterEnPlanificacion.png"
+},
+{   
+    "id" :9,
+    "categoria" : "PLANTILLAS EDITABLES",
+    "nombre" : "Planner en Office 365",
+    "precio": 8700,
+    "imagen": "./src/assets/img/SR_VERDE.png"
+},
+{   
+    "id" :10,
+    "categoria" : "PLANTILLAS EDITABLES",
+    "nombre" : "Planner en Jira",
+    "precio": 9500,
+    "imagen": "./src/assets/img/SR_PlannerNotion.png" 
+},
+{   
+    "id" :11,
+    "categoria" : "PRESETS",
+    "nombre" : "Pack Premiun",
+    "precio": 60500,
+    "imagen": "./src/assets/img/SR_VERDE.png"
+},
+{   
+    "id" :12,
+    "categoria" : "SERVICIOS",
+    "nombre" : "Capacitaciones",
+    "precio": 6500,
+    "imagen": "./src/assets/img/SR_MarketingDigital.png"
 }
 ]
