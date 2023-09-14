@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ItemDetail ({item}) {
-    //console.log(item);
+    console.log(item);
     return ( 
       
       <div className="item-detail">
