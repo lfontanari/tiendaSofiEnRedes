@@ -19,6 +19,12 @@
       text-align: center;
 }
 
+.div-checkout {
+      
+      width: 50vw; /* Ancho del 50% del ancho de la ventana */
+      height: 30vh; /* Alto del 30% del alto de la ventana */
+      
+}
 .header-nav {
       display: flex;
       flex-flow: row wrap;

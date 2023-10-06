@@ -28,18 +28,25 @@ export default function Checkout () {
     }
 
 
-
-
      return ( 
-        <form  style={{display: 'flex', flexDirection:"column", gap: "30px"}}>
-            <label>Name</label>  
-            <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-            <label>Email</label>  
-            <input type="text" value={email} onChange={(event) => setEmail(event.target.value)} />
-            <label>Phone</label>  
-            <input type="text" value={phone} onChange={(event) => setPhone(event.target.value)} />
-            <button onClick={crearOrden}>Finalizar compra</button>
-        </form>      
+        <div className="div-checkout">
+            <h1>Finalizando la Compra</h1>
+            <hr />
+            <div>
+                <h4>Completar Datos:</h4>
+                <br /> 
+            <form  style={{display: 'flex', flexDirection:"column", gap: "30px"}}>
+                
+                <input type="text" name="Nombre"  placeholder="Nombre" required/>
+                
+                <input type="text" name="Email"  placeholder="Email"  required   onChange={(event) => setEmail(event.target.value)} />
+                
+                <input type="text" name="Telefono"  placeholder="Telefono"  required onChange={(event) => setPhone(event.target.value)} />
+                <br /> 
+                <button type="submit" className="btn btn-success" onClick={crearOrden}>Finalizar compra</button>
+            </form> 
+            </div>
+        </div>     
     )
 }
 

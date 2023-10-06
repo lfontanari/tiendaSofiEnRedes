@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import ItemCount from "./ItemCount";
 import { CartContext } from "../context/CartContext";
 import { Link } from 'react-router-dom';
+import Cart from "./Cart";
 
 
 export default function ItemDetail ({item}) {
@@ -21,7 +22,13 @@ export default function ItemDetail ({item}) {
         }, cantidad);    
       
     };
+   
 
+    const [showCart, setShowCart] = useState(false);
+
+    const handleShowCart = () => {
+      setShowCart(true);
+    }; 
  
     return ( 
       <div className="item-detail">
@@ -31,22 +38,14 @@ export default function ItemDetail ({item}) {
         <h2>Precio: ${item.precio}</h2>
         <ItemCount count={cantidad} setCount={setCantidad} />
         <button onClick={handleAddToCart}>Agregar al carrito </button> 
-        <a href="/Checkout">
-          <button >Finalizar Compra</button>
-        </a>
+         
+        <button onClick={handleShowCart}>Finalizar Compra</button>
+        {showCart && <Cart cartItems={cart} />} 
         
         <Link to="/"> Volver</Link>
        </div>
    )
 }
 
-//  <button onClick={handleDeleteToCart}>Eliminar del carrito</button>
-/* const handleDeleteToCart = () => {
-       
-  if (isItemInCart(item.id)) {
-         removeItemCart(item.id)
-  }
-};
-*/
 
         

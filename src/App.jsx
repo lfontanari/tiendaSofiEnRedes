@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Button from './components/button';
 import Checkout from './components/Checkout';
 import Cart from './components/Cart';
+import CartWidget from './components/CartWidget';
 
 export default function App() {
   
@@ -24,6 +25,7 @@ export default function App() {
                     <Route exact path="/item/:itemId" element={<ItemDetailContainer />} />
                     <Route exact path="/checkout" element={<Checkout />} />
                     <Route exact path="/cart" element={<Cart />} />
+                   
                   </Routes> 
           </BrowserRouter>
         </CartProvider>

@@ -35,11 +35,12 @@ export default function ItemDetailContainer() {
     return <p>Cargando...</p>;
   }
 
+
+
   return (
     <div className="item-detail-container">
       <ItemDetail item={item} />
     </div>
   );
-
 }
 
