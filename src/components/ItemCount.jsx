@@ -1,17 +1,16 @@
-import { useState } from "react"
 
-export default function ItemCount() {
+export default function ItemCount( {count, setCount}) {
 
-    const [count, setCount] = useState(0)
-
+    /* const [count, setCount] = useState(1) */
+   
     function onIncrease() {
-        if (count < 5) {
+        if (count < 10) {
         setCount(count + 1)
         }
     }
 
     function onDecrease() {
-        if (count > 0 ) {
+        if (count > 1 ) {
         setCount(count - 1)
         }
     }
@@ -21,7 +20,7 @@ export default function ItemCount() {
     return (
         <div>
             <button onClick={onDecrease}>-</button>
-            <span>{count}</span>
+            <span>  {count}  </span>
             <button onClick={onIncrease}>+</button>
         </div>
     )

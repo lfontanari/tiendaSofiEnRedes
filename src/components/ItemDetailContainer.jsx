@@ -1,36 +1,45 @@
-import React, { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
-import productosJSON from '../productos.json';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import ItemDetail from './ItemDetail';
 
-const mockAPI = (itemId) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log(itemId);
-      if (itemId !== "") { 
-        const productoEncontrado = productosJSON.find((item) => item.id === parseInt(itemId)); 
-        console.log(productoEncontrado);
-        resolve(productoEncontrado);
-      } else {
-        resolve(null); 
-      }
-    }, 1000);
-  });
-};
 
 export default function ItemDetailContainer() {
-  const { itemId } = useParams();
-  const [item, setItem] = useState(null); 
-
+ 
+  const [item, setItem] = useState("");
+  let { itemId } = useParams();
+  itemId= parseInt(itemId,10);
+  
   useEffect(() => {
-    mockAPI(itemId).then((data) => setItem(data));
+    const db = getFirestore();
+   
+    const q = query(collection(db, "productos"), where("id", "==",itemId));
+
+    getDocs(q)
+      .then((snapshot) => {
+        
+        if (snapshot.size > 0) {
+          const doc = snapshot.docs[0];
+          const itemData = { id: doc.id, ...doc.data() };
+          setItem(itemData);
+        } else {
+          setItem(null);
+        }
+      })
+      .catch((error) => {
+        console.error('Error al recuperar el elemento:', error);
+      });
   }, [itemId]);
 
-  if (!item) return <p>Cargando...</p>; 
+  if (item === null) {
+    return <p>Cargando...</p>;
+  }
 
   return (
     <div className="item-detail-container">
       <ItemDetail item={item} />
     </div>
   );
+
 }
+
