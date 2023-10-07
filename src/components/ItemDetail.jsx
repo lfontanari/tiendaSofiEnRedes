@@ -23,13 +23,18 @@ export default function ItemDetail ({item}) {
       
     };
    
-
+//----------------------------------------------------------------
     const [showCart, setShowCart] = useState(false);
 
     const handleShowCart = () => {
       setShowCart(true);
     }; 
  
+    const handleCloseCart = () => {
+      setShowCart(false);
+    };
+   
+
     return ( 
       <div className="item-detail">
         <img src={item.imagen} width={125} alt={"imagen"} />
@@ -38,11 +43,13 @@ export default function ItemDetail ({item}) {
         <h2>Precio: ${item.precio}</h2>
         <ItemCount count={cantidad} setCount={setCantidad} />
         <button onClick={handleAddToCart}>Agregar al carrito </button> 
-         
-        <button onClick={handleShowCart}>Finalizar Compra</button>
-        {showCart && <Cart cartItems={cart} />} 
-        
-        <Link to="/"> Volver</Link>
+
+        {item && <button onClick={handleShowCart}>Finalizar Compra</button>} 
+
+        {showCart && <Cart cartItems={cart} />}
+
+        <Link to="/"> Volver a la tienda</Link>
+
        </div>
    )
 }

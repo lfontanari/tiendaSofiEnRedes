@@ -23,11 +23,7 @@ const firebaseConfig = {
   measurementId: "G-HGCTB3ZSEW"
 };
 
-const a= {
-  buyer: {name: "Mia", phone: 542215542, email: "mia@gmail.com"},
-  items: [{id:1, title:"remerased", precio:10}],
-  total: 1000,
-}
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import ItemDetail from './ItemDetail';
@@ -9,6 +9,7 @@ export default function ItemDetailContainer() {
   const [item, setItem] = useState("");
   let { itemId } = useParams();
   itemId= parseInt(itemId,10);
+   
   
   useEffect(() => {
     const db = getFirestore();
@@ -35,12 +36,10 @@ export default function ItemDetailContainer() {
     return <p>Cargando...</p>;
   }
 
-
-
+ //----------------------------------------------------------------
   return (
     <div className="item-detail-container">
       <ItemDetail item={item} />
     </div>
   );
 }
-

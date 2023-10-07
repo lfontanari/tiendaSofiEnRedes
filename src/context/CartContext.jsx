@@ -10,7 +10,7 @@ export function CartProvider ({children}) {
 
     let [cart, setCart] = useState([]);
     let [totProductos, setTotProductos] = useState(0);
-
+   
     function addItemCart (item, cantidad) {
         
         setCart([...cart, { ...item, cantidad}]);  // guardamos el item y la cantidad
@@ -39,7 +39,8 @@ export function CartProvider ({children}) {
     function clearCart () {
          
         setCart([]);
-        setTotProductos(0); 
+        setTotProductos(0);
+       
     }
 
     function isItemInCart (itemId) {
